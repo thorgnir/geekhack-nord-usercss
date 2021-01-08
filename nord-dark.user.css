@@ -1,0 +1,937 @@
+/* ==UserStyle==
+    @name           Geekhack Nord Dark
+    @namespace      https://github.com/thorgnir
+    @version        0.0.2
+    @homepageURL    https://github.com/thorgnir/geekhack-nord-usercss
+    @supportURL     https://github.com/thorgnir/geekhack-nord-usercss/issues
+    @description    Nord dark theme for geekhack.org
+    @author         thorgnir <thorgnir@gmail.com>
+    @license        CC-BY-SA-4.0
+    ==/UserStyle== */
+
+    @-moz-document url-prefix("https://geekhack.org") {
+
+        :root {
+            --nord0: #2e3440;
+            --nord1: #3b4252;
+            --nord2: #434c5e;
+            --nord3: #4c566a;
+            --nord4: #d8dee9;
+            --nord5: #e5e9f0;
+            --nord6: #eceff4;
+            --nord7: #8fbcbb;
+            --nord8: #88c0d0;
+            --nord9: #81a1c1;
+            --nord10: #5e81ac;
+            --nord11: #bf616a;
+            --nord12: #d08770;
+            --nord13: #ebcb8b;
+            --nord14: #a3be8c;
+            --nord15: #b48ead;
+          }
+    
+        /* Normal, standard links. */
+        a:link,
+        a:visited {
+            color: var(--nord8);
+        }
+    
+        /* Links that open in a new window. */
+        a.new_win:link,
+        a.new_win:visited {
+            color: var(--nord8);
+        }
+    
+        /* Set a fontsize that will look the same in all browsers. */
+        body {
+            background: var(--nord0) repeat-x;
+        }
+    
+    
+        body,
+        td,
+        th,
+        tr {
+            color: var(--nord4);
+        }
+    
+        /* We can style the different types of input buttons to be uniform throughout different browsers and their color themes.
+            .button_submit - covers input[type=submit], input[type=button], button[type=submit] and button[type=button] in all browsers
+            .button_reset  - covers input[type=reset] and button[type=reset] throughout all browsers
+            .input_check	- covers input[type=checkbox] throughout all browsers
+            .input_radio	- covers input[type=radio] throughout all browsers
+            .input_text	 - covers input[type=text] throughout all browsers
+            .input_file	 - covers input[type=file] throughout all browsers
+        */
+        input,
+        button,
+        select,
+        textarea {
+            color: var(--nord4);
+            background: var(--nord3);
+            border: 1px solid var(--nord9);
+        }
+    
+        /* Buttons should be styled a bit differently, in order to make them look more button'ish. */
+        .button_submit,
+        .button_reset {
+            background: var(--nord3);
+            border: 1px solid var(--nord9);
+        }
+    
+        input:hover,
+        textarea:hover,
+        button:hover,
+        select:hover {
+            border: 1px solid var(--nord10);
+        }
+    
+        .button_submit:hover,
+        .button_reset:hover {
+            border: 1px solid var(--nord10);
+            background: var(--nord3);
+        }
+    
+        input:focus,
+        textarea:focus,
+        button:focus,
+        select:focus {
+            border: 1px solid var(--nord7);
+            outline: none;
+        }
+    
+    
+        /* Give disabled text input elements a different background color. */
+        input[disabled].input_text {
+            background-color: #A9A9A9;
+        }
+    
+        /* Standard horizontal rule.. ([hr], etc.) */
+        hr,
+        .hrcolor {
+            color: var(--nord9);
+            background-color: var(--nord9);
+        }
+    
+        /* By default set the color on these tags as var(--nord0). */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--nord4);
+        }
+    
+        /* Fieldsets are used to group elements. */
+        fieldset {
+            border: 1px solid var(--nord3);
+        }
+    
+        fieldset legend {
+            color: var(--nord4);
+        }
+    
+        /* A quote, perhaps from another post. */
+        blockquote.bbc_standard_quote,
+        blockquote.bbc_alternate_quote {
+            color: var(--nord4);
+            border-top: 1px solid var(--nord9);
+            /* nord9 */
+            border-bottom: 1px solid var(--nord9);
+            /* nord9 */
+        }
+    
+        /* Alterate blockquote stylings */
+        blockquote.bbc_standard_quote {
+            background-color: #4d576a;
+            /* nord3 */
+        }
+    
+        blockquote.bbc_alternate_quote {
+            background-color: var(--nord2);
+            /* nord2 */
+        }
+    
+        /* A code block - maybe PHP ;). */
+        code.bbc_code {
+            background: #555555;
+            color: var(--nord0);
+            border-top: 2px solid #C8C8C8;
+            border-bottom: 2px solid #C8C8C8;
+        }
+    
+        /* The "Quote:" and "Code:" header parts... */
+        .codeheader,
+        .quoteheader {
+            color: #666;
+        }
+    
+        /* Styling for BBC tags */
+        .bbc_link:link,
+        .bbc_link:visited {
+            border-bottom: 1px solid var(--nord8);
+        }
+    
+        .bbc_link:hover {
+            border-bottom: 1px solid var(--nord8);
+        }
+    
+        /* /me uses this a lot. (emote, try typing /me in a post.) */
+        .meaction {
+            color: red;
+        }
+    
+        /* Highlighted text - such as search results. */
+        .highlight {
+            color: #ff7200 !important;
+        }
+    
+        /* A more discreet highlight color, for selected membergroups etc. */
+        .highlight2 {
+            background-color: #D1E1EF;
+            color: var(--nord0) !important;
+        }
+    
+        .more_head,
+        .more_image {
+            background-color: var(--nord8);
+            color: #fff;
+        }
+    
+        /* Generic, mostly color-related, classes.
+        ------------------------------------------------------- */
+        .titlebg,
+        .titlebg2,
+        tr.titlebg th,
+        tr.titlebg td,
+        tr.titlebg2 td {
+            color: var(--nord4);
+            background: var(--nord3);
+        }
+    
+        .catbg,
+        .catbg2,
+        tr.catbg td,
+        tr.catbg2 td,
+        tr.catbg th,
+        tr.catbg2 th {
+            color: var(--nord4);
+        }
+    
+        tr.titlebg th a:link,
+        tr.titlebg th a:visited,
+        tr.titlebg2 td a:link,
+        tr.titlebg2 td a:visited {
+            color: #EEEEEE;
+        }
+    
+        tr.catbg th a:link,
+        tr.catbg th a:visited,
+        tr.catbg2 td a:link,
+        tr.catbg2 td a:visited {
+            color: #DDDDDD;
+        }
+    
+        /* Alternating backgrounds for posts, and several other sections of the forum. */
+        .windowbg,
+        #preview_body {
+            color: var(--nord4);
+            background-color: var(--nord2);
+            /* nord2 */
+        }
+    
+        .windowbg2 {
+            color: var(--nord4);
+            background-color: var(--nord1);
+            /* nord1 */
+        }
+    
+        .windowbg3 {
+            color: var(--nord4);
+            background-color: #202020;
+        }
+    
+        /* Colors for background of posts requiring approval */
+        .approvebg {
+            color: var(--nord4);
+            background-color: #39120B;
+        }
+    
+        .approvebg2 {
+            color: var(--nord4);
+            background-color: #40140C;
+        }
+    
+        /* Color for background of *topics* requiring approval */
+        .approvetbg {
+            color: #DDDDDD;
+            background-color: #561B10;
+        }
+    
+        .approvetbg2 {
+            color: #DDDDDD;
+            background-color: #621F12;
+        }
+    
+        /* Sticky topics get a different background */
+        .stickybg {
+            background: var(--nord3);
+        }
+    
+        .stickybg2 {
+            background: var(--nord3);
+        }
+    
+        /* Locked posts get a different shade, too! */
+        .lockedbg {
+            background: var(--nord3);
+        }
+    
+        .lockedbg2 {
+            background: var(--nord3);
+        }
+    
+        /* All the signatures used in the forum.  If your forum users use Mozilla, Opera, or Safari, you might add max-height here ;). */
+        .signature,
+        .attachments {
+            border-top: 1px solid var(--nord9);
+            /* nord9 */
+        }
+    
+        .custom_fields_above_signature {
+            border-top: 1px solid var(--nord9);
+            /* nord9 */
+        }
+    
+        /* Sometimes there will be an error when you post */
+        .error {
+            color: var(--nord11);
+        }
+    
+        /* Messages that somehow need to attract the attention. */
+        .alert {
+            color: var(--nord11);
+        }
+    
+        /* Calendar colors for birthdays, events and holidays */
+        .birthday {
+            color: var(--nord15);
+        }
+    
+        .event {
+            color: var(--nord14);
+        }
+    
+        .holiday {
+            color: var(--nord8);
+        }
+    
+        /* Colors for warnings */
+        .warn_mute {
+            color: var(--nord11);
+        }
+    
+        .warn_moderate {
+            color: var(--nord12);
+        }
+    
+        .warn_watch,
+        .success {
+            color: var(--nord14);
+        }
+    
+        a.moderation_link,
+        a.moderation_link:visited {
+            color: var(--nord11);
+        }
+    
+        .openid_login {
+            background: white url(../images/openid.gif) no-repeat;
+        }
+    
+        /* a descriptive style */
+        .description,
+        .description_board,
+        .plainbox {
+            border: 1px solid var(--nord3);
+            background: var(--nord1);
+        }
+    
+        /* an informative style */
+        .information {
+            border: 1px solid var(--nord3);
+            background: var(--nord0);
+        }
+    
+        /* AJAX notification bar
+        ------------------------------------------------------- */
+        #ajax_in_progress {
+            color: #f96f00;
+        }
+    
+        #ajax_in_progress a {
+            color: orange;
+        }
+    
+        /* Styles for rounded headers.
+        ------------------------------------------------------- */
+        h3.catbg a:link,
+        h3.catbg a:visited,
+        h4.catbg a:link,
+        h4.catbg a:visited,
+        h3.catbg,
+        .table_list tbody.header td,
+        .table_list tbody.header td a {
+            color: var(--nord8);
+        }
+    
+        h3.catbg2 a,
+        h3.catbg2 {
+            color: var(--nord4);
+        }
+    
+        h3.catbg a:hover,
+        h4.catbg a:hover,
+        .table_list tbody.header td a:hover {
+            color: #FFFFFF;
+        }
+    
+        h3.catbg2 a:hover {
+            color: #FFFFFF;
+        }
+    
+        h3.titlebg a,
+        h3.titlebg,
+        h4.titlebg,
+        h4.titlebg a {
+            color: var(--nord4);
+        }
+    
+        h3.titlebg a:hover,
+        h4.titlebg a:hover {
+            color: #FFFFFF;
+        }
+    
+        h4.titlebg,
+        h3.titlebg {
+            background: #292929;
+        }
+    
+        div.title_bar {
+            background: #292929;
+        }
+    
+        div.title_barIC {
+            background: var(--nord3);
+        }
+    
+        div.title_barIC h4.titlebg {
+            background: var(--nord3);
+        }
+    
+        /* The half-round header bars for some tables. */
+        .table_grid tr.catbg,
+        .table_grid tr.titlebg {
+            border-bottom: 1px solid var(--nord3);
+        }
+    
+        table.table_grid td {
+            border-bottom: 1px solid var(--nord3);
+            border-right: 1px solid var(--nord3);
+        }
+    
+        /* Common styles used to add corners to divisions.
+        -------------------------------------------------------*/
+        .windowbg span.topslice {
+            background: var(--nord2);
+        }
+    
+        .windowbg span.topslice span {
+            background: var(--nord2);
+        }
+    
+        .windowbg span.botslice {
+            background: var(--nord2);
+        }
+    
+        .windowbg span.botslice span {
+            background: var(--nord2);
+        }
+    
+        .windowbg2 span.topslice {
+            background: var(--nord1);
+        }
+    
+        .windowbg2 span.topslice span {
+            background: var(--nord1);
+        }
+    
+        .windowbg2 span.botslice {
+            background: var(--nord1);
+        }
+    
+        .windowbg2 span.botslice span {
+            background: var(--nord1);
+        }
+    
+        .approvebg span.topslice {
+            background: #202020;
+        }
+    
+        .approvebg span.topslice span {
+            background: #202020;
+        }
+    
+        .approvebg span.botslice {
+            background: #202020;
+        }
+    
+        .approvebg span.botslice span {
+            background: #202020;
+        }
+    
+        .postbg {
+            border-left: 1px solid #7f7f7f;
+            border-right: 1px solid #7f7f7f;
+        }
+    
+        /* Used for sections that need somewhat larger corners.
+        -----------------------------------------------------------*/
+        .roundframe {
+            background: var(--nord1);
+            border: 1px solid var(--nord3);
+        }
+    
+        /* Styles used by the auto suggest control.
+        ------------------------------------------------------- */
+        .auto_suggest_div {
+            border: 1px solid var(--nord3);
+        }
+    
+        .auto_suggest_item {
+            background-color: #292929;
+        }
+    
+        .auto_suggest_item_hover {
+            background-color: #292929;
+            color: #eee;
+        }
+    
+        /* Styles for the standard dropdown menus.
+        ------------------------------------------------------- */
+        #main_menu {
+            background: var(--nord0);
+        }
+    
+        .dropmenu a {
+            color: var(--nord4);
+        }
+    
+        /* the background's first level only */
+        .dropmenu li a.firstlevel {
+            border: 1px solid var(--nord3);
+            background-color: var(--nord1);
+        }
+    
+        .dropmenu li ul {
+            color: var(--nord4);
+            border-bottom: 1px solid var(--nord3);
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqoAAAEsCAYAAAALhJEyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZBSURBVHhe7da7TQNBFEDRtd0IFdAAGQ0gUQV0RBVINEBGA1RAIwYWaTYgwjbS6to6J5lfMC+8m+kfbm7vr7a73cvnfn89rn6Z397nt7u31+ePcQUAwAVYowNPDtW/hluIVQCAy7JWB54UqocOtxCrAACXYc0OPDpUjx1uIVYBAM7b2h24mT98HPuDzB89HDvcYgz5NI4AAJyRtTvwJ1S/xh4AADK2YwUAgBShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAACQJVQAAkoQqAABJQhUAgCShCgBAklAFACBJqAIAkCRUAQBIEqoAAARN0zdD5HVZIxYDPgAAAABJRU5ErkJggg==) 0 0 no-repeat;
+            /* opacity: 1.0; */
+        }
+    
+        .dropmenu li li {
+            border-left: 1px solid var(--nord3);
+            border-right: 1px solid var(--nord3);
+            /* background-color: var(--nord0); */
+        }
+    
+        /* the active button */
+        .dropmenu li a.active {
+            border: 1px solid var(--nord10);
+            color: var(--nord4);
+        }
+    
+        /* the hover effects */
+        .dropmenu li a.firstlevel:hover,
+        .dropmenu li:hover a.firstlevel {
+            background: var(--nord2);
+            border: 1px solid var(--nord10);
+            color: var(--nord4);
+        }
+    
+        /* the hover effects on level2 and 3 */
+        .dropmenu li li a:hover,
+        .dropmenu li li:hover>a {
+            background: var(--nord3);
+            color: var(--nord4);
+        }
+    
+        .dropmenu li li.additional_items {
+            background-color: var(--nord3);
+        }
+    
+        /* Styles for the standard button lists.
+        ------------------------------------------------------- */
+        .buttonlist ul li a {
+            color: var(--nord4);
+            background: var(--nord1);
+        }
+    
+        .buttonlist ul li a:hover {
+            background: var(--nord2);
+            color: var(--nord4);
+        }
+    
+        .buttonlist ul li a span {
+            background: var(--nord1);
+        }
+    
+        .buttonlist ul li a:hover span {
+            background: var(--nord2);
+        }
+    
+        /* the active one */
+        .buttonlist ul li a.active {
+            background: var(--nord2);
+            color: var(--nord4);
+        }
+    
+        .buttonlist ul li a.active span {
+            background: var(--nord2);
+        }
+    
+        .buttonlist ul li a.active:hover {
+            background: var(--nord3);
+            color: var(--nord4);
+        }
+    
+        .buttonlist ul li a.active:hover span {
+            background: var(--nord3);
+        }
+    
+        /* Styles for the general looks for the Nostalgia theme.
+        -------------------------------------------------------- */
+        /* the framing graphics */
+        #header {
+            background: url(../images/theme/main_block.png) var(--nord0) no-repeat 0 0;
+            padding-left: 20px;
+        }
+    
+        #header div.frame {
+            background: url(../images/theme/main_block.png) no-repeat 100% 0;
+            display: block;
+            padding: 10px 20px 1em 0;
+        }
+    
+        /* the content section */
+        #content_section {
+            background: var(--nord0) url(../images/theme/frame_repeat.png) repeat-y top left;
+            padding-left: 20px;
+        }
+    
+        #content_section div.frame {
+            background: url(../images/theme/frame_repeat.png) repeat-y top right;
+            display: block;
+            padding: 0 20px 0 0;
+        }
+    
+        /* The navigation list (i.e. linktree) */
+        .navigate_section ul {
+            border-top: 1px solid #ccc;
+        }
+    
+        /* The footer wih copyright links etc. */
+        #footer_section {
+            background: url(../images/theme/main_block.png) no-repeat 0 -340px;
+        }
+    
+        #footer_section div.frame {
+            background: url(../images/theme/main_block.png) no-repeat 100% -340px;
+        }
+    
+        /* Styles for the board index.
+        ------------------------------------------------- */
+        /* the board title! */
+        .table_list tbody.content td.info a.subject {
+            color: var(--nord7);
+        }
+    
+        .table_list tbody.content td.children {
+            color: var(--nord4);
+        }
+    
+        /* the newsfader */
+        #smfFadeScroller {
+            color: #575757;
+            /* shouldn't be shorthand style due to a JS bug in IE! */
+        }
+    
+        /* Styles for the info center on the board index.
+        ---------------------------------------------------- */
+        #upshrinkHeaderIC p.last {
+            border-top: 2px dotted #bbb;
+        }
+    
+        /* Styles for the message (topic) index.
+        ---------------------------------------------------- */
+        .table_frame .table_list td.icon,
+        .table_frame .table_list td.info,
+        .table_frame .table_list td.stats {
+            border-right: 2px solid white;
+        }
+    
+        /* Events */
+        /* Poll vote options */
+        #poll_options ul.options {
+            border-top: 1px solid #9999aa;
+        }
+    
+        #poll_options div.submitbutton {
+            border-bottom: 1px solid #9999aa;
+        }
+    
+        /* Poll results */
+        #poll_options dl.options {
+            border: solid #9999aa;
+        }
+    
+        /* poster details and list of items */
+        .poster h4,
+        .poster h4 a {
+            color: var(--nord14);
+        }
+    
+        .modifybutton {
+            color: #334466;
+        }
+    
+        ul.quickbuttons a:hover {
+            color: var(--nord7);
+        }
+    
+        ul.quickbuttons li.quote_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 0;
+        }
+    
+        ul.quickbuttons li.remove_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -30px;
+        }
+    
+        ul.quickbuttons li.modify_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -60px;
+        }
+    
+        ul.quickbuttons li.approve_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -90px;
+        }
+    
+        ul.quickbuttons li.restore_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -120px;
+        }
+    
+        ul.quickbuttons li.split_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -150px;
+        }
+    
+        ul.quickbuttons li.reply_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -180px;
+        }
+    
+        ul.quickbuttons li.reply_all_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -180px;
+        }
+    
+        ul.quickbuttons li.notify_button {
+            background: url(../images/theme/quickbuttons.png) no-repeat 0 -210px;
+        }
+    
+        ul.quickbuttons li.mquote {
+            background: url(../images/buttons/reply_sm.gif) no-repeat;
+        }
+    
+        ul.quickbuttons li.mquote_remove {
+            background: url(../images/buttons/mquote_remove.gif) no-repeat;
+        }
+    
+        ul.quickbuttons li.mquote_remove a {
+            color: var(--nord12);
+        }
+    
+        .inner {
+            border-top: 1px solid #99a;
+        }
+    
+        /* Styles for edit post section
+        ---------------------------------------------------- */
+        #postMoreOptions {
+            border-bottom: 1px solid #cacdd3;
+        }
+    
+        #postAttachment,
+        #postAttachment2 {
+            border-bottom: 1px solid #cacdd3;
+        }
+    
+        /* Styles for the split topic section.
+        ---------------------------------------------------- */
+        ul.split_messages div.post {
+            border-top: 1px solid var(--nord4);
+        }
+    
+        /* Styles for the registration section.
+        ------------------------------------------------------- */
+        .register_error {
+            border: 1px dashed red;
+        }
+    
+        /* Additional profile fields */
+        .coppa_contact {
+            background-color: var(--nord3);
+            color: var(--nord0);
+            border: 1px solid var(--nord0);
+        }
+    
+        .valid_input {
+            background-color: #f5fff0;
+        }
+    
+        .invalid_input {
+            background-color: #fff0f0;
+        }
+    
+        /* Styles for generic tables.
+        ------------------------------------------------------- */
+        .topic_table table thead {
+            border-bottom: 1px solid var(--nord3);
+        }
+    
+        .topic_table td.stickybg2 {
+            background-image: url(../images/icons/quick_sticky.gif);
+        }
+    
+        .topic_table td.lockedbg2 {
+            background-image: url(../images/icons/quick_lock.gif);
+        }
+    
+        .topic_table td.locked_sticky2 {
+            background-image: url(../images/icons/quick_sticky_lock.gif);
+        }
+    
+        /* Styles for (fatal) errors.
+        ------------------------------------------------- */
+        .errorbox {
+            border: 1px solid var(--nord11);
+            color: var(--nord4);
+            background-color: var(--nord0);
+        }
+    
+        /* Styles for the profile section.
+        ------------------------------------------------- */
+        #detailedinfo div.content dl,
+        #tracking div.content dl {
+            border-bottom: 1px var(--nord4) solid;
+        }
+    
+        .signature,
+        .custom_fields_above_signature {
+            border-top: 1px var(--nord9) solid;
+            /* nord9 */
+        }
+    
+        /* Simple feedback messages */
+        div#profile_error {
+            border-color: var(--nord11);
+            color: var(--nord4);
+            background: #160000;
+        }
+    
+        div#profile_success {
+            border-color: var(--nord14);
+            color: var(--nord4);
+            background: var(--nord0);
+        }
+    
+        /* Activity by time */
+        .activity_stats li span {
+            border: solid var(--nord0);
+        }
+    
+        .activity_stats li div.bar div {
+            background: #6294CE;
+        }
+    
+        /* View posts */
+        .counter {
+            color: #3f3f3f;
+        }
+    
+        .list_posts {
+            border-top: 2px solid #b3b3bf;
+        }
+    
+        .ignoreboards a {
+            border-bottom: 1px solid #c4c4c4;
+        }
+    
+        .ignoreboards a:hover {
+            border-bottom: 1px solid #334466;
+        }
+    
+        /* Styles for the personal messages section.
+        ------------------------------------------------- */
+        #personal_messages .capacity_bar {
+            background: #f0f4f7;
+            border: 1px solid #adadad;
+        }
+    
+        #personal_messages .capacity_bar span {
+            border-right: 1px solid #adadad;
+        }
+    
+        #personal_messages .capacity_bar span.empty {
+            background: #a6d69d;
+        }
+    
+        #personal_messages .capacity_bar span.filled {
+            background: #eea800;
+        }
+    
+        #personal_messages .capacity_bar span.full {
+            background: #f10909;
+        }
+    
+        dl.addrules dt.floatleft {
+            color: #333;
+        }
+    
+        /* Used to indicate the current day in the grid. */
+        .calendar_today {
+            background-color: #fff;
+        }
+    
+        #main_grid table h3.catbg {
+            border-top: 2px solid var(--nord3);
+        }
+    
+        #main_grid table.weeklist td.windowbg {
+            border-bottom: 2px solid var(--nord3);
+        }
+    
+        #main_grid table.weeklist td.weekdays {
+            border-bottom: 2px solid var(--nord3);
+        }
+    
+        a.modify_event {
+            color: red;
+        }
+    
+        #top_section {
+            background: none !important;
+        }
+    
+        .editor {
+            border: 1px solid var(--nord9);
+        }
+    }
