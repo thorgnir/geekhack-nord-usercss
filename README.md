@@ -1,4 +1,3 @@
-# geekhack-nord-usercss
 Nord dark usercss for geekhack.org
 
 [Install from greasyfork](https://greasyfork.org/en/scripts/419768-geekhack-nord-dark)
