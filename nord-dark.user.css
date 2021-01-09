@@ -639,7 +639,7 @@
     
         /* The navigation list (i.e. linktree) */
         .navigate_section ul {
-            border-top: 1px solid #ccc;
+            border-top: 1px solid var(--nord9);
         }
     
         /* The footer wih copyright links etc. */
