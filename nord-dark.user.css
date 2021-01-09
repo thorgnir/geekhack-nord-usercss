@@ -1,7 +1,7 @@
 /* ==UserStyle==
     @name           Geekhack Nord Dark
     @namespace      https://github.com/thorgnir
-    @version        0.0.2
+    @version        0.0.3
     @homepageURL    https://github.com/thorgnir/geekhack-nord-usercss
     @supportURL     https://github.com/thorgnir/geekhack-nord-usercss/issues
     @description    Nord dark theme for geekhack.org
@@ -144,7 +144,7 @@
     
         /* Alterate blockquote stylings */
         blockquote.bbc_standard_quote {
-            background-color: #4d576a;
+            background-color: var(--nord3);
             /* nord3 */
         }
     
@@ -760,7 +760,7 @@
         }
     
         .inner {
-            border-top: 1px solid #99a;
+            border-top: 1px solid var(--nord9);
         }
     
         /* Styles for edit post section
