@@ -1,7 +1,7 @@
 /* ==UserStyle==
     @name           Geekhack Nord Dark
     @namespace      https://github.com/thorgnir
-    @version        0.0.3
+    @version        0.0.4
     @homepageURL    https://github.com/thorgnir/geekhack-nord-usercss
     @supportURL     https://github.com/thorgnir/geekhack-nord-usercss/issues
     @description    Nord dark theme for geekhack.org
@@ -155,16 +155,16 @@
     
         /* A code block - maybe PHP ;). */
         code.bbc_code {
-            background: #555555;
-            color: var(--nord0);
-            border-top: 2px solid #C8C8C8;
-            border-bottom: 2px solid #C8C8C8;
+            background: var(--nord1);
+            color: var(--nord4);
+            border-top: 2px solid var(--nord10);
+            border-bottom: 2px solid var(--nord10);
         }
     
         /* The "Quote:" and "Code:" header parts... */
         .codeheader,
         .quoteheader {
-            color: #666;
+            color: var(--nord4);
         }
     
         /* Styling for BBC tags */
